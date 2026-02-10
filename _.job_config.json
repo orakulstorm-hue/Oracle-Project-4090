@@ -1,0 +1,129 @@
+{
+  "job": "extension",
+  "config": {
+    "name": "marianna_f2_11",
+    "process": [
+      {
+        "type": "diffusion_trainer",
+        "training_folder": "D:\\AI_Models\\AI Toolkit UI\\ai-toolkit\\output",
+        "sqlite_db_path": "D:\\AI_Models\\AI Toolkit UI\\ai-toolkit\\aitk_db.db",
+        "device": "cuda",
+        "trigger_word": "marianna_f2_11",
+        "performance_log_every": 10,
+        "network": {
+          "type": "lora",
+          "linear": 16,
+          "linear_alpha": 16,
+          "conv": 16,
+          "conv_alpha": 16,
+          "lokr_full_rank": true,
+          "lokr_factor": -1,
+          "network_kwargs": {
+            "ignore_if_contains": []
+          }
+        },
+        "save": {
+          "dtype": "bf16",
+          "save_every": 400,
+          "max_step_saves_to_keep": 2,
+          "save_format": "diffusers",
+          "push_to_hub": false
+        },
+        "datasets": [
+          {
+            "folder_path": "D:\\AI_Models\\AI Toolkit UI\\ai-toolkit\\datasets/marianna_f2_1",
+            "mask_path": null,
+            "mask_min_value": 0.1,
+            "default_caption": "",
+            "caption_ext": "txt",
+            "caption_dropout_rate": 0.05,
+            "cache_latents_to_disk": true,
+            "is_reg": false,
+            "network_weight": 1,
+            "resolution": [
+              1024
+            ],
+            "controls": [],
+            "shrink_video_to_frames": true,
+            "num_frames": 1,
+            "flip_x": false,
+            "flip_y": false,
+            "num_repeats": 1,
+            "control_path_1": null,
+            "control_path_2": null,
+            "control_path_3": null
+          }
+        ],
+        "train": {
+          "batch_size": 1,
+          "bypass_guidance_embedding": false,
+          "steps": 800,
+          "gradient_accumulation": 1,
+          "train_unet": true,
+          "train_text_encoder": false,
+          "gradient_checkpointing": true,
+          "noise_scheduler": "flowmatch",
+          "optimizer": "adamw8bit",
+          "timestep_type": "weighted",
+          "content_or_style": "balanced",
+          "optimizer_params": {
+            "weight_decay": 0.0001
+          },
+          "unload_text_encoder": true,
+          "cache_text_embeddings": false,
+          "lr": 0.0001,
+          "ema_config": {
+            "use_ema": false,
+            "ema_decay": 0.99
+          },
+          "skip_first_sample": true,
+          "force_first_sample": false,
+          "disable_sampling": true,
+          "dtype": "bf16",
+          "diff_output_preservation": false,
+          "diff_output_preservation_multiplier": 1,
+          "diff_output_preservation_class": "person",
+          "switch_boundary_every": 1,
+          "loss_type": "mse"
+        },
+        "logging": {
+          "log_every": 1,
+          "use_ui_logger": true
+        },
+        "model": {
+          "name_or_path": "black-forest-labs/FLUX.2-dev",
+          "quantize": true,
+          "qtype": "qfloat8",
+          "quantize_te": true,
+          "qtype_te": "qfloat8",
+          "arch": "flux2",
+          "low_vram": true,
+          "model_kwargs": {
+            "match_target_res": false
+          },
+          "layer_offloading": true,
+          "layer_offloading_text_encoder_percent": 0.91,
+          "layer_offloading_transformer_percent": 0.91
+        },
+        "sample": {
+          "sampler": "flowmatch",
+          "sample_every": 250,
+          "width": 1024,
+          "height": 1024,
+          "samples": [],
+          "neg": "",
+          "seed": 42,
+          "walk_seed": true,
+          "guidance_scale": 4,
+          "sample_steps": 25,
+          "num_frames": 1,
+          "fps": 1
+        }
+      }
+    ]
+  },
+  "meta": {
+    "name": "[name]",
+    "version": "1.0"
+  }
+}
