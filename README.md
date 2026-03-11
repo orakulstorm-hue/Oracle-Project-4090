@@ -72,7 +72,7 @@ Run as Administrator before each training session.
 ![System Logs](3.jpg)
 *Real-time monitoring of the 4090 under maximum load.*
 
-## 🎥 Early Demo
+## 🎥 The blade sliding phenomenon, now we have concrete under our feet
 
 
 https://github.com/user-attachments/assets/e1912b29-80e7-462f-9d10-a2a1d510590c
