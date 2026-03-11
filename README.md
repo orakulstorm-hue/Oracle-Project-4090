@@ -72,6 +72,13 @@ Run as Administrator before each training session.
 ![System Logs](3.jpg)
 *Real-time monitoring of the 4090 under maximum load.*
 
+## 🎥 Early Demo
+
+
+https://github.com/user-attachments/assets/e1912b29-80e7-462f-9d10-a2a1d510590c
+
+
+
 ### Before P-State Unlock:
 ```
 Iteration time: 45-60 seconds
