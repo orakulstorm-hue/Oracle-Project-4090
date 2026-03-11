@@ -66,6 +66,12 @@ Run as Administrator before each training session.
 ### The Original Vision
 ![Conceptual Result 1](1.jpg)
 
+### Terminal & Infrastructure
+![Conceptual Result 2](2.jpg)
+*Latent stability verification.*
+![System Logs](3.jpg)
+*Real-time monitoring of the 4090 under maximum load.*
+
 ### Before P-State Unlock:
 ```
 Iteration time: 45-60 seconds
